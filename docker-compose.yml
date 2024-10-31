@@ -1,0 +1,12 @@
+name: jndi-example-liferay-workspace
+services:
+  liferay-workspace:
+    build: ./liferay-workspace
+    image: jndi-example-liferay-workspace/liferay-workspace
+    container_name: liferay-workspace
+    tty: true
+    ports:
+      - "8080:8080" # http
+      - "8000:8000" # debug
+      - "11311:11311" # osgi console
+      - "9010:9010" # jmx
