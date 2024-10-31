@@ -1,0 +1,11 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Use Windows line endings for Windows-specific scripts and files
+*.bat eol=crlf
+
+# Use linux line endings for linux-specific scripts and utils
+*.sh text eol=lf
+
+# Treat .jars and other artifacts as binaries
+*.jar binary

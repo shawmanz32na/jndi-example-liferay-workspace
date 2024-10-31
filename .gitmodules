@@ -1,0 +1,4 @@
+[submodule "liferay-workspace/liferay-jndi-example"]
+	path = liferay-workspace/liferay-jndi-example
+	url = https://github.com/shawmanz32na/liferay-jndi-example.git
+	branch = main
