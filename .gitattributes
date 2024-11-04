@@ -9,3 +9,6 @@
 
 # Treat .jars and other artifacts as binaries
 *.jar binary
+
+# Always use linux line endings for container resources
+/db/** text eol=lf

@@ -25,3 +25,6 @@ COPY tomcat/bin/setenv.sh bundles/tomcat/bin/
 
 # "Install" the PostgreSQL JDBC Driver by moving it from Liferay's libs to the global Tomcat libs
 RUN mv bundles/tomcat/webapps/ROOT/WEB-INF/shielded-container-lib/postgresql.jar bundles/tomcat/lib/
+
+# Launch Liferay on startup
+CMD blade server start && tail -f /usr/liferay-workspace/bundles/tomcat/logs/catalina.out
