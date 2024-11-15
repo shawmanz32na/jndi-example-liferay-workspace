@@ -25,5 +25,5 @@ ADD https://jdbc.postgresql.org/download/postgresql-42.7.4.jar bundles/tomcat-9.
 RUN mv bundles/tomcat-9.0.17/webapps/ROOT/WEB-INF/lib/slf4j-api.jar bundles/tomcat-9.0.17/lib/ext/
 RUN mv bundles/tomcat-9.0.17/webapps/ROOT/WEB-INF/lib/hikaricp.jar bundles/tomcat-9.0.17/lib/ext/
 
-# # # Launch Liferay on startup
-# # CMD blade server start && tail -f /usr/liferay-workspace/bundles/tomcat/logs/catalina.out
+# # Launch Liferay on startup
+# CMD blade server start && tail -f /usr/liferay-workspace/bundles/tomcat/logs/catalina.out
