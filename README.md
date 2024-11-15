@@ -2,6 +2,8 @@
 
 A containerized [Liferay Workspace](https://learn.liferay.com/w/dxp/liferay-development/tooling/liferay-workspace) for demonstrating use of [jndi-example](https://github.com/dnebing/jndi-example).
 
+_Note: this repository includes the JNDI example workspace as a git submodule. After cloning, initialize it using `git submodule update --init` and then `git submodule foreach "git switch <target-submodule-branch-name>"` ._
+
 ## Usage
 
 ```
@@ -9,16 +11,13 @@ A containerized [Liferay Workspace](https://learn.liferay.com/w/dxp/liferay-deve
 docker compose up -d
 
 # Launch a terminal in the Liferay Workspace container
-docker exec -it liferay-workspace
+docker exec -it liferay-workspace /bin/bash
 
 # Start Liferay
 blade server start
 
 # Deploy the JNDI example
-pushd liferay-workspace/liferay-jndli-example/modules/com.liferay.jndi.example/com.liferay.jndi.example.api
-blade gw clean deploy
-popd
-pushd liferay-workspace/liferay-jndli-example/modules/com.liferay.jndi.example/com.liferay.jndi.example.service
+pushd liferay-workspace/liferay-jndli-example/modules/com.liferay.jndi.example
 blade gw clean deploy
 popd
 ```
